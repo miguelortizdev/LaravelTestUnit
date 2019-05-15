@@ -44,6 +44,6 @@ class UserTest extends FeatureTestCase
                     ->withSession(['name' => 'Miguel Ortiz Osorio']) // Establecer la sesión a la matriz dada.
                     ->get('api/user');
 
-        $this->assertTrue(true);
+        $response->assertStatus(200);
     }
 }
