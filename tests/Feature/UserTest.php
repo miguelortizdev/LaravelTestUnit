@@ -2,11 +2,7 @@
 
 namespace Tests\Feature;
 
-use Tests\TestCase;
-use Illuminate\Foundation\Testing\RefreshDatabase;
-use Illuminate\Foundation\Testing\DatabaseMigrations; // Ejecuta las migraciones
-use Illuminate\Foundation\Testing\DatabaseTransactions; // No ejecuta las migraciones
-
+use Tests\FeatureTestCase;
 
 /*
  * Modelos
@@ -17,21 +13,15 @@ use App\User;
  * https://laravel.com/api/5.8/Illuminate/Foundation/Testing.html
  */
 
-class UserTest extends TestCase
+class UserTest extends FeatureTestCase
 {
-
-    /*
-     * Ejecuta consultas dentro de una transición de una base de datos
-     * Deja la base de datos como esta
-     */
-    use DatabaseTransactions;
 
     /**
      * A basic test example.
      *
      * @return void
      */
-    public function testBasicTest()
+    function test_basic_user_auth()
     {
         /*
          * El metodo factory
