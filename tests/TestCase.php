@@ -3,8 +3,9 @@
 namespace Tests;
 
 use Illuminate\Foundation\Testing\TestCase as BaseTestCase;
+use Illuminate\Foundation\Testing\DatabaseTransactions; // No ejecuta las migraciones
 
 abstract class TestCase extends BaseTestCase
 {
-    use CreatesApplication, TestsHelperTrait;
+    use DatabaseTransactions, CreatesApplication, TestsHelperTrait;
 }

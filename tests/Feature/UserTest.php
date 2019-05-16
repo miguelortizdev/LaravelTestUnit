@@ -2,7 +2,7 @@
 
 namespace Tests\Feature;
 
-use Tests\FeatureTestCase;
+use Tests\TestCase;
 
 /*
  * Modelos
@@ -13,7 +13,7 @@ use App\User;
  * https://laravel.com/api/5.8/Illuminate/Foundation/Testing.html
  */
 
-class UserTest extends FeatureTestCase
+class UserTest extends TestCase
 {
 
     /**

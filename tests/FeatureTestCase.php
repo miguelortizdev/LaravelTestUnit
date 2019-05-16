@@ -2,7 +2,7 @@
 
 namespace Tests;
 
-// use Laravel\BrowserKitTesting\TestCase as BaseTestCase;
+use Laravel\BrowserKitTesting\TestCase as BaseTestCase;
 use Illuminate\Foundation\Testing\RefreshDatabase;
 use Illuminate\Foundation\Testing\DatabaseMigrations; // Ejecuta las migraciones
 use Illuminate\Foundation\Testing\DatabaseTransactions; // No ejecuta las migraciones
@@ -11,7 +11,7 @@ use Illuminate\Foundation\Testing\DatabaseTransactions; // No ejecuta las migrac
  * https://laravel.com/api/5.8/Illuminate/Foundation/Testing.html
  */
 
-abstract class FeatureTestCase extends TestCase
+abstract class FeatureTestCase extends BaseTestCase //TestCase
 {
     /**
      * Ejecuta consultas dentro de una transición de una base de datos

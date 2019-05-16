@@ -2,9 +2,9 @@
 
 namespace Tests\Feature;
 
-use Tests\FeatureTestCase;
+use Tests\TestCase;
 
-class ExampleTest extends FeatureTestCase
+class ExampleTest extends TestCase
 {
     /**
      * A basic test example.
