@@ -60,4 +60,15 @@ class CreatePostsTest extends FeatureTestCase
         $this->assertTrue(true);
     }
 
+    public function test_create_a_post_requires_authentication()
+    {
+        /*
+         * Si no esta autenticado redireccionar a la ruta login
+         * seePageIs -> Afirma que la página actual coincide con un URI determinado
+         */
+
+        $this->visit(route('posts.create'))
+            ->seePageIs(route('login'));
+    }
+
 }
